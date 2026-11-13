@@ -38,7 +38,7 @@
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="password.html">Forgot Password?</a>
-                                                <a class="btn btn-success" href="welcome.blade.php">Login</a>
+                                                <a class="btn btn-success" href="web.php">Login</a>
                                             </div>
                                         </form>
                                     </div>
