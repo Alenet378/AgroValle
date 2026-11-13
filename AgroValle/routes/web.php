@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProveedorController;
 
 Route::middleware('guest')->group(function () {
     Route::get('/', fn () => redirect()->route('login'));
@@ -12,10 +13,13 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', fn () => view('dashboard'))->name('dashboard');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
+    Route::resource('proveedores', ProveedorController::class)
+    ->parameters(['proveedores' => 'proveedor'])
+    ->except(['show']);
+    
     // Temporales
     Route::get('/insumos', fn () => 'Insumos')->name('insumos.index');
-    Route::get('/proveedores', fn () => 'Proveedores')->name('proveedores.index');
+
     Route::get('/empleados', fn () => 'Empleados')->name('empleados.index');
 });
 
