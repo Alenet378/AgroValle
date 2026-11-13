@@ -6,23 +6,27 @@
     --agro-bg: #f4f7f5;
 }
 
-/* Fondo general del contenido */
+
 #layoutSidenav_content {
     background-color: var(--agro-bg);
 }
 
-/* Topbar con degradado */
+
 .sb-topnav.bg-success {
     background: linear-gradient(90deg, var(--agro-green-deep), var(--agro-green)) !important;
 }
 
-/* Sidebar verde oscuro */
+
+
 .sb-sidenav-dark {
-    background: var(--agro-green-deep);
+    background: #2b2a27;
+}
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+    color: #d4a017;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
-    background: rgba(255, 255, 255, 0.15);
-    border-left: 4px solid #fff;
+    background: rgba(212, 160, 23, 0.15);
+    border-left: 4px solid #f5c542;
     color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
@@ -30,24 +34,24 @@
     color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
-    background: rgba(0, 0, 0, 0.2);
+    background: #201f1d;
 }
 
-/* Títulos de página */
+
 main h1 {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--agro-green-deep);
 }
 
-/* Tarjetas */
+
 .card {
     border: 0;
     border-radius: 0.75rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* Tablas */
+
 .table thead.table-light th {
     background-color: var(--agro-green);
     color: #fff;
@@ -60,7 +64,7 @@ main h1 {
 .table > :not(caption) > * > * { padding: 0.8rem 0.75rem; }
 .table-hover > tbody > tr:hover > * { background-color: var(--agro-green-soft); }
 
-/* Botones y formularios */
+
 .btn-success {
     background-color: var(--agro-green);
     border-color: var(--agro-green);
@@ -75,14 +79,14 @@ main h1 {
 }
 .form-label { font-weight: 600; color: #333; }
 
-/* Paginación en verde */
+
 .pagination .page-item.active .page-link {
     background-color: var(--agro-green);
     border-color: var(--agro-green);
 }
 .pagination .page-link { color: var(--agro-green-dark); }
 
-/* Tarjetas KPI del dashboard */
+
 .kpi-card {
     border-left: 5px solid var(--kpi-color, var(--agro-green));
     transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -103,7 +107,6 @@ main h1 {
     background: color-mix(in srgb, var(--kpi-color, var(--agro-green)) 15%, white);
 }
 
-/* Login */
 .login-bg {
     background: linear-gradient(135deg, var(--agro-green-deep), var(--agro-green) 60%, #4cae7d);
     min-height: 100vh;
