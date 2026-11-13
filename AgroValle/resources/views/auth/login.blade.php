@@ -28,26 +28,37 @@
                                     <h3 class="fw-light my-2">Login AgroValle Honduras</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form method="POST" action="{{ route('login.post') }}">
+                                        @csrf
+
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputEmail" type="email"
-                                                placeholder="name@agrovalle.hn" />
-                                            <label for="inputEmail">Correo Electronico Institucional</label>
+                                            <input class="form-control @error('email') is-invalid @enderror" id="email"
+                                                name="email" type="email" value="{{ old('email') }}"
+                                                placeholder="correo@agrovalle.hn" required autofocus />
+                                            <label for="email">Correo institucional (@agrovalle.hn)</label>
+                                            @error('email')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
+
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputPassword" type="password"
-                                                placeholder="Password" />
-                                            <label for="inputPassword">Password</label>
+                                            <input class="form-control @error('password') is-invalid @enderror"
+                                                id="password" name="password" type="password" placeholder="Contraseña"
+                                                required />
+                                            <label for="password">Contraseña</label>
+                                            @error('password')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
+
                                         <div class="form-check mb-3">
-                                            <input class="form-check-input" id="inputRememberPassword" type="checkbox"
-                                                value="" />
-                                            <label class="form-check-label" for="inputRememberPassword">Remember
-                                                Password</label>
+                                            <input class="form-check-input" id="remember" name="remember"
+                                                type="checkbox" value="1" />
+                                            <label class="form-check-label" for="remember">Recordar mi sesión</label>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="password.html">Forgot Password?</a>
-                                            <a class="btn btn-success" href="web.php">Login</a>
+
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-success">Iniciar sesión</button>
                                         </div>
                                     </form>
                                 </div>
