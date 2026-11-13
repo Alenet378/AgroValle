@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\InsumoController;
 
 Route::middleware('guest')->group(function () {
     Route::get('/', fn () => redirect()->route('login'));
@@ -16,11 +18,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('proveedores', ProveedorController::class)
     ->parameters(['proveedores' => 'proveedor'])
     ->except(['show']);
-    
-    // Temporales
-    Route::get('/insumos', fn () => 'Insumos')->name('insumos.index');
-
-    Route::get('/empleados', fn () => 'Empleados')->name('empleados.index');
+    Route::resource('empleados', EmpleadoController::class)->except(['show']);
+    Route::resource('insumos', InsumoController::class)->except(['show']);
 });
 
 ?>
