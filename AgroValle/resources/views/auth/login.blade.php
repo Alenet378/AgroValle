@@ -10,21 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/agrovalle.css') }}" rel="stylesheet" />
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
 
 </head>
 
-<body class="bg-success">
+<body class="login-bg">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
-                            <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header text-center py-4">
+                            <div class="card login-card mt-5">
+                                <div class="card-header bg-white text-center py-4 border-0">
                                     <img src="{{ asset('assets/img/logo_agro_valle.png') }}" alt="AGROVALLE Honduras"
-                                        class="img-fluid mb-3" style="max-height: 90px;">
+                                        class="logo-marco mb-3">
                                     <h3 class="fw-light my-2">Login AgroValle Honduras</h3>
                                 </div>
                                 <div class="card-body">
@@ -70,15 +71,12 @@
         </div>
 
         <div id="layoutAuthentication_footer">
-            <footer class="py-4 bg-light mt-auto">
+            <footer class="py-3 mt-auto footer-login">
                 <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
+                    <div class="text-center small text-white">
+                        &copy; {{ date('Y') }} Distribuidora Agropecuaria del Valle S. de R.L. (AGROVALLE Honduras)
+                        <br>
+                        Comayagua · San Pedro Sula, Honduras
                     </div>
                 </div>
             </footer>

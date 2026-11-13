@@ -3,32 +3,29 @@
         <div class="nav">
 
             <div class="text-center py-3">
-                <img src="{{ asset('assets/img/logo_agro_valle.png') }}"
-                     alt="AGROVALLE Honduras"
-                     class="img-fluid rounded"
-                     style="max-height: 80px;">
+                <img src="{{ asset('assets/img/logo_agro_valle.png') }}" alt="AGROVALLE Honduras" class="logo-marco"
+                    style="width:80px; height:80px;">
             </div>
 
             <div class="sb-sidenav-menu-heading">Principal</div>
-            <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
-               href="{{ route('dashboard') }}">
+            <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
                 <div class="sb-nav-link-icon"><i class="bi bi-speedometer2"></i></div>
                 Dashboard
             </a>
 
             <div class="sb-sidenav-menu-heading">Módulos</div>
             <a class="nav-link {{ request()->routeIs('insumos.*') ? 'active' : '' }}"
-               href="{{ route('insumos.index') }}">
+                href="{{ route('insumos.index') }}">
                 <div class="sb-nav-link-icon"><i class="bi bi-box-seam"></i></div>
                 Insumos
             </a>
             <a class="nav-link {{ request()->routeIs('proveedores.*') ? 'active' : '' }}"
-               href="{{ route('proveedores.index') }}">
+                href="{{ route('proveedores.index') }}">
                 <div class="sb-nav-link-icon"><i class="bi bi-truck"></i></div>
                 Proveedores
             </a>
             <a class="nav-link {{ request()->routeIs('empleados.*') ? 'active' : '' }}"
-               href="{{ route('empleados.index') }}">
+                href="{{ route('empleados.index') }}">
                 <div class="sb-nav-link-icon"><i class="bi bi-people"></i></div>
                 Empleados
             </a>
